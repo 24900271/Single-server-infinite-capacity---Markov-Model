@@ -1,4 +1,5 @@
-# Single server with infinite capacity (M/M/1):(oo/FIFO)
+# EXP-04 Single server with infinite capacity (M/M/1):(oo/FIFO)
+## Date:20.12.2024
 ## Aim :
 To find (a) average number of materials in the system (b) average number of materials in the conveyor (c) waiting time of each material in the system (d) waiting time of each material in the conveyor, if the arrival  of materials follow poisson process with the mean interval time 12 seconds, serivice time of lathe machine follows exponential distribution with mean serice time 1 second and average service time of robot is 7seconds.
 
@@ -17,40 +18,21 @@ This is a queuing model in which the arrival is Marcovian and departure distribu
 ![imAGE](2.png)
 
 ## Experiment:
+
 ![Exp 4 1](https://github.com/21003698/Single-server-infinite-capacity---Markov-Model/assets/93427522/2960ee3e-7325-4e09-85e1-ae816ceaaab3)
 
-![Exp 4 2](https://github.com/21003698/Single-server-infinite-capacity---Markov-Model/assets/93427522/f5b111fa-a1b3-47ce-b862-a071560beec0)
 
 ## Program
-```python
-arr_time=float(input("Enter the mean inter arrival time of objects from Feeder (in secs): "))
-ser_time=float(input("Enter the mean  inter service time of Lathe Machine (in secs) :  "))
-Robot_time=float(input("Enter the Additional time taken for the Robot (in secs) :  "))
-lam=1/arr_time
-mu=1/(ser_time+Robot_time)
-print("--------------------------------------------------------------")
-print("Single Server with Infinite Capacity - (M/M/1):(oo/FIFO)")
-print("--------------------------------------------------------------")
-print("The mean arrival rate per second : %0.2f "%lam)
-print("The mean service rate per second : %0.2f "%mu)
-if (lam <  mu):
-    Ls=lam/(mu-lam)
-    Lq=Ls-lam/mu
-    Ws=Ls/lam
-    Wq=Lq/lam
-    print("Average number of objects in the system : %0.2f "%Ls)
-    print("Average number of objects in the conveyor :  %0.2f "%Lq)
-    print("Average waiting time of an object in the system : %0.2f secs"%Ws)
-    print("Average waiting time of an object in the conveyor : %0.2f secs"%Wq)
-    print("Probability that the system is busy : %0.2f "%(lam/mu) )
-    print("Probability that the system is empty : %0.2f "%(1-lam/mu) )
-else:
-    print("Warning! Objects Over flow will happen in the conveyor")
-print("---------------------------------------------------------------")
-```
+##Developed By:S.R.Amiritha
+##Register Number:24900271
+
+![Screenshot 2024-12-20 140339](https://github.com/user-attachments/assets/ec3a135a-cc8e-4af9-bc34-0054f51f668b)
+
 
 ## Output :
-![out](https://github.com/21003698/Single-server-infinite-capacity---Markov-Model/assets/93427522/56a83ac2-cbd6-41e5-a0ab-788d37c1160d)
+
+![Screenshot 2024-12-20 134055](https://github.com/user-attachments/assets/7aa94d07-6c42-44c6-9fb2-20079ee72362)
+
 
 
 ## Result :
